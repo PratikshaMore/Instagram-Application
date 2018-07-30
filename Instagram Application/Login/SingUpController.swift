@@ -170,7 +170,7 @@ class SingUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                         print("Successfully saved user info to db")
                         
                         guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-                        mainTabBarController.setupViewController()
+                        mainTabBarController.setupViewControllers()
                         self.dismiss(animated: true, completion: nil)
                         
                     })
@@ -233,43 +233,12 @@ class SingUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         
         view.addSubview(stackView)
         
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: -40, width: 0, height: 200)
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: 0, height: 200)
         
     }
 }
 
-extension UIView {
-    func anchor(top: NSLayoutYAxisAnchor?,left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?,  paddingTop: CGFloat, paddingLeft : CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat, height: CGFloat) {
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        if let top = top {
-            self.topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
-            
-        }
-        
-        if let left = left {
-            self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
-            
-        }
-        if let bottom = bottom {
-            self.bottomAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
-            
-        }
-        if let right = right {
-            self.rightAnchor.constraint(equalTo: right, constant: paddingRight).isActive = true
-            
-        }
-        
-        if  height != 0 {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-        
-        if width != 0 {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-    }
-}
+
 
 
 

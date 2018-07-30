@@ -97,7 +97,7 @@ class LoginController: UIViewController {
             print("loging back in with user ", user?.user.uid ?? "")
             
             guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-            mainTabBarController.setupViewController()
+            mainTabBarController.setupViewControllers()
             
             self.dismiss(animated: true, completion: nil)
         })
@@ -154,7 +154,7 @@ class LoginController: UIViewController {
         stackView.distribution = .fillEqually
         
         view.addSubview(stackView)
-        stackView.anchor(top: logoContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 40, paddingLeft: 40, paddingBottom: 0, paddingRight: -40, width: 0, height: 140)
+        stackView.anchor(top: logoContainerView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 40, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: 0, height: 140)
     }
 }
 
