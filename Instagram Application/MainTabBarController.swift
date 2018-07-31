@@ -1,8 +1,8 @@
 //
-//  MainTabBarController.swift
+//  AppDelegate.swift
 //  Instagram Application
 //
-//  Created by Pratiksha Pradip More on 7/27/18.
+//  Created by Pratiksha Pradip More on 7/26/18.
 //  Copyright © 2018 Pratiksha Pradip More. All rights reserved.
 //
 
@@ -49,7 +49,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func setupViewControllers() {
         //home
-        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: UserProfileController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: HomeController(collectionViewLayout: UICollectionViewFlowLayout()))
         
         //search
         let searchNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"))

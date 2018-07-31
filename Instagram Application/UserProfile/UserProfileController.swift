@@ -27,36 +27,33 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.register(UserProfilePhotoCell.self, forCellWithReuseIdentifier: cellId)
         
         setupLogOutButton()
-        fetchPosts()
+        
+        //        fetchPosts()
+        
+        fetchOrderedPosts()
     }
     
-    var post = [Post]()
+    var posts = [Post]()
     
-    
-    fileprivate func fetchPosts() {
+    fileprivate func fetchOrderedPosts() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-       let ref = Database.database().reference().child("Posts").child(uid)
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value)
-            guard let disctionaries = snapshot.value as? [String: Any] else { return }
+        let ref = Database.database().reference().child("posts").child(uid)
+        
+        //perhaps later on we'll implement some pagination of data
+        ref.queryOrdered(byChild: "creationDate").observe(.childAdded, with: { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
             
-            disctionaries.forEach({ (key, value) in
-              //  print("key:  \(key), value: \(value)")
-                
-                guard let disctionary = value  as? [String: Any] else { return }
-                let imageUrl = disctionary["imageUrl"] as? String
-               // print("Image url : \(imageUrl)")
-                
-                
-                let post = Post(dictionary: disctionary)
-               // print(post.imageUrl)
-                self.post.append(post)
-            })
+            guard let user = self.user else { return }
+            
+            let post = Post(user: user, dictionary: dictionary)
+            
+            self.posts.insert(post, at: 0)
+            //            self.posts.append(post)
             
             self.collectionView?.reloadData()
-        })
-        { (err) in
-            print("Failed to fetch post: ",err)
+            
+        }) { (err) in
+            print("Failed to fetch ordered posts:", err)
         }
     }
     
@@ -90,13 +87,14 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return post.count
+        return posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserProfilePhotoCell
         
-        cell.post = post[indexPath.item]
+        cell.post = posts[indexPath.item]
         
         return cell
     }
@@ -133,30 +131,12 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     fileprivate func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value ?? "")
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.user = user
             
-            guard let dictionary = snapshot.value as? [String: Any] else { return }
-            
-            self.user = User(dictionary: dictionary)
             self.navigationItem.title = self.user?.username
             
             self.collectionView?.reloadData()
-            
-        }) { (err) in
-            print("Failed to fetch user:", err)
         }
     }
 }
-
-struct User {
-    let username: String
-    let profileImageUrl: String
-    
-    init(dictionary: [String: Any]) {
-        self.username = dictionary["username"] as? String ?? ""
-        self.profileImageUrl = dictionary["profileImageUrl"]  as? String ?? ""
-    }
-}
-
-
