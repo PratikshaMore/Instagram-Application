@@ -12,7 +12,6 @@ import Photos
 
 class PhotoSelectorController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    
     let cellId = "cellId"
     let headerId = "headerId"
     

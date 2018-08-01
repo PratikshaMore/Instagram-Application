@@ -17,9 +17,8 @@ class UserProfilePhotoCell: UICollectionViewCell {
         }
     }
     
-    let photoImageView: CustomimageView = {
-        let iv = CustomimageView()
-        iv.backgroundColor = .red
+    let photoImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
@@ -35,4 +34,5 @@ class UserProfilePhotoCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

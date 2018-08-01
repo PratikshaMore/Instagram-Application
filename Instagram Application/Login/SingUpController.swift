@@ -6,6 +6,14 @@
 //  Copyright © 2018 Pratiksha Pradip More. All rights reserved.
 
 
+//
+//  ViewController.swift
+//  InstagramFirebase
+//
+//  Created by Brian Voong on 3/15/17.
+//  Copyright © 2017 Lets Build That App. All rights reserved.
+//
+
 import UIKit
 import Firebase
 
@@ -211,6 +219,8 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
 }
+
+
 
 
 
