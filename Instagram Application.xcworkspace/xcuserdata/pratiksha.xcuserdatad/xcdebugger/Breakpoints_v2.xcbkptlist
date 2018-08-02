@@ -19,5 +19,126 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Instagram Application/AddPhoto/PhotoSelectorController.swift"
+            timestampString = "554923950.423407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.__deallocating_deinit"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.0521621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.__allocating_init(collectionViewLayout: __ObjC.UICollectionViewLayout) -&gt; Instagram_Application.PhotoSelectorController"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.05507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.init(collectionViewLayout: __ObjC.UICollectionViewLayout) -&gt; Instagram_Application.PhotoSelectorController"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.056886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Instagram_Application.PhotoSelectorController"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.058871"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Instagram_Application.PhotoSelectorController"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.060588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Instagram_Application.PhotoSelectorController&gt;"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.0623339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Instagram_Application.PhotoSelectorController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Instagram_Application.PhotoSelectorController&gt;"
+                  moduleName = "Instagram Application"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratiksha/Desktop/Git/Instagram-Application/Instagram%20Application/AddPhoto/PhotoSelectorController.swift"
+                  timestampString = "554923081.063905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
