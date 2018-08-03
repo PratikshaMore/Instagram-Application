@@ -15,7 +15,6 @@ class CustomAnimationPresentor: NSObject, UIViewControllerAnimatedTransitioning 
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        //my custom transition animation code logic
         
         let containerView = transitionContext.containerView
         guard let fromView = transitionContext.view(forKey: .from) else { return }

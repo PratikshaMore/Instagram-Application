@@ -96,6 +96,7 @@ class CameraController: UIViewController, AVCapturePhotoCaptureDelegate, UIViewC
         
     }
     
+    
     let output = AVCapturePhotoOutput()
     fileprivate func setupCaptureSession() {
         let captureSession = AVCaptureSession()
